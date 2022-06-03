@@ -22,25 +22,25 @@ Hydrogen is a React framework and SDK that you can use to build fast and dynamic
 - Yarn
 
 ```bash
-yarn
-yarn dev
+npm install
+npm run dev
 ```
 
 Remember to update `hydrogen.config.js` with your shop's domain and Storefront API token!
 
 ## Previewing a production build
 
-To run a local preview of your Hydrogen app in an environment similar to Oxygen, build your Hydrogen app and then run `yarn preview`:
+To run a local preview of your Hydrogen app in an environment similar to Oxygen, build your Hydrogen app and then run `npm run preview`:
 
 ```bash
-yarn build
-yarn preview
+npm run build
+npm run preview
 ```
 
 ## Building for production
 
 ```bash
-yarn build
+npm run build
 ```
 
 ## Running tests
@@ -50,11 +50,11 @@ This project contains basic end-to-end (E2E) tests in the `/tests/e2e` folder po
 You can run tests in development, and they will automatically reload when you make changes to the component you provide to `hydrogen.watchForUpdates()`:
 
 ```bash
-yarn test
+npm run test
 ```
 
 To run tests in a continuous-integration (CI) environment like GitHub Actions:
 
 ```bash
-yarn test:ci
+npm run test:ci
 ```
