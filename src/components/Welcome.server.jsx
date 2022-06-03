@@ -155,6 +155,7 @@ export default function Welcome() {
         <h1 className="font-extrabold mb-4 text-5xl md:text-7xl">
           Hello, Hydrogen
         </h1>
+        <div className="test">Je suis un test</div>
         <p className="text-lg mb-8">
           Welcome to your custom storefront. Let&rsquo;s get building.
         </p>
@@ -178,6 +179,12 @@ export default function Welcome() {
           <TemplateLinks />
         </Suspense>
       </div>
+      <style jsx>{`
+        .test {
+          font-size: 100px;  // works 
+          @apply text-7xl;  // do not works
+        }
+      `}</style>
     </div>
   );
 }
