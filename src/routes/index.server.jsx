@@ -24,6 +24,8 @@ export default function Index() {
         <SeoForHomepage />
       </Suspense>
       <div className="relative mb-12">
+      <div className="test">Je suis un test</div>
+
         <Welcome />
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={countryCode} />
