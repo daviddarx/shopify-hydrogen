@@ -1,17 +1,19 @@
 import renderHydrogen from '@shopify/hydrogen/entry-server';
 import {
   Router,
-  Route,
-  FileRoutes,
   ShopifyProvider,
   PerformanceMetrics,
   PerformanceMetricsDebug,
+  log
 } from '@shopify/hydrogen';
 import {Suspense} from 'react';
 import DefaultSeo from './components/DefaultSeo.server';
-import NotFound from './components/NotFound.server';
 import LoadingFallback from './components/LoadingFallback';
 import ServerCartProvider from './components/ServerCartProvider.server';
+import AnimatedRoutes from './components/AnimatedRoutes.server';
+
+log.trace('app started'); // Statically log some information.
+
 
 function App() {
   return (
@@ -20,8 +22,7 @@ function App() {
         <ServerCartProvider>
           <DefaultSeo />
           <Router>
-            <FileRoutes />
-            <Route path="*" page={<NotFound />} />
+            <AnimatedRoutes />       
           </Router>
         </ServerCartProvider>
         <PerformanceMetrics />
